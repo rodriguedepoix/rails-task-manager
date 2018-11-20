@@ -1,0 +1,24 @@
+<h1> new task </h1>
+
+<!-- <form action ="/" restaurants method = 'post'>
+  <label for="title" >What is your new task? </label>
+  <input type="text" name="task[title]" id="title">
+  <label for "details" > What is the details of your new task ?</label>
+  <input type="text" name="task[details]" id="details">
+
+  <input type="submit" value ="Add">
+
+</form> -->
+
+<!-- <form action="/tasks" method="post">
+  <label for=""></label>
+  <input type="text">
+</form> -->
+
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>

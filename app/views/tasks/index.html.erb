@@ -1,0 +1,8 @@
+<h1>Taks#view </h1>
+<ul>
+  <%@tasks.each do |task| %>
+    <li class= "input-group"> <%=link_to task.title, task_path(task) %>
+    <%=link_to 'delete', task_path(task), method: :delete %> </li>
+  <% end %>
+</ul>
+<p><%=link_to 'add a new task', new_task_path%></p>
