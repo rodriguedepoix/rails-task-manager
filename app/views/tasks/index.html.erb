@@ -1,8 +1,17 @@
 <h1>Taks#view </h1>
 <ul style="list-style-type: none; ">
   <%@tasks.each do |task| %>
-    <li> <i class="far fa-check-circle"></i><%=link_to task.title, task_path(task) %></li>
-    <li> <i class="fas fa-trash-alt"></i> <%=link_to '', task_path(task), method: :delete %> </li>
+    <li>
+      <i class="far fa-check-circle"></i> <%=link_to task.title, task_path(task) %>
+      <i class="fas fa-trash-alt"> </i> <%=link_to 'ici', task_path(task), method: :delete %>
+    </li>
   <% end %>
 </ul>
-<p><%=link_to 'add a new task', new_task_path%></p>
+<a class="btn btn-default"><%=link_to 'add a new task', new_task_path%></a>
+
+
+
+<%= link_to '', task_path(task) do %>
+<i class="fas fa-trash-alt"></i>
+<% end %>
+
